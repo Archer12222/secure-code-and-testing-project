@@ -17,3 +17,13 @@ Product.create!(
   name: "Cat treats",
   price: 18.99
 )
+
+user1 = User.create!(
+  email:    'bob@email.com',
+  password: 'password'
+)
+ 
+user2 = User.create!(
+  email:    'alice@email.com',
+  password: 'password'
+)
