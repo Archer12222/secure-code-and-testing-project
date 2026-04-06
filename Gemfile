@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.3.6"
 
+# Authentication
+gem 'devise'
+
 # Disconnects all connections to PostgreSQL db when running rails db:reset
 gem 'pgreset', group: %i[development test]
 

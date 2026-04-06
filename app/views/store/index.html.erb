@@ -1,0 +1,9 @@
+<h1>Store</h1>
+
+<% @products.each do |product| %>
+  <div>
+    <h2><%= product.name %></h2>
+    <p>$<%= product.price %></p>
+    <%= link_to "View", store_product_path(product) %>
+  </div>
+<% end %>

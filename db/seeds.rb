@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Product.create!(
+  name: "Dog treats",
+  price: 19.99
+)
+
+Product.create!(
+  name: "Cat treats",
+  price: 18.99
+)
