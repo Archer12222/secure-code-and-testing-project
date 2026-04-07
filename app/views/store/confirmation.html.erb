@@ -1,0 +1,8 @@
+<h1>Order confirmed!</h1>
+
+<p>Thank you for your purchase.</p>
+
+<p><strong>Product:</strong> <%= @product.name %></p>
+<p><strong>Total charged:</strong> $<%= @product.price %></p>
+
+<%= link_to "Back to store", store_path, class: "btn btn-primary" %>

@@ -12,8 +12,11 @@ Rails.application.routes.draw do
 
   get "/store",          to: "store#index",  as: :store
   get "/store/:id",      to: "store#show",   as: :store_product
+  get  "/store/:id/checkout",       to: "store#checkout", as: :checkout
+  post "/store/:id/checkout",       to: "store#process_checkout"
+  get  "/store/:id/confirmation",   to: "store#confirmation", as: :confirmation
 
-
+  get "/health", to: "store#health"
 end
 
 

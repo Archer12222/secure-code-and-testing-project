@@ -1,0 +1,36 @@
+<h1>Checkout</h1>
+
+<p><strong>Product:</strong> <%= @product.name %></p>
+<p><strong>Price:</strong> $<%= @product.price %></p>
+
+<% if @error %>
+  <p style="color: red;"><%= @error %></p>
+<% end %>
+
+<%= form_with url: checkout_path(@product), method: :post, local: true do |f| %>
+
+  <div>
+    <label>Full name</label><br>
+    <%= f.text_field :name, placeholder: "Jane Smith" %>
+  </div>
+
+  <div>
+    <label>Card number</label><br>
+    <%= f.text_field :card_number, placeholder: "1234 5678 9012 3456", maxlength: 19 %>
+  </div>
+
+  <div>
+    <label>Expiry date</label><br>
+    <%= f.text_field :expiry, placeholder: "MM/YY", maxlength: 5 %>
+  </div>
+
+  <div>
+    <label>CVV</label><br>
+    <%= f.password_field :cvv, placeholder: "123", maxlength: 3 %>
+  </div>
+
+  <br>
+  <%= f.submit "Complete Purchase", class: "btn btn-success" %>
+  <%= link_to "Cancel", store_product_path(@product), class: "btn btn-secondary" %>
+
+<% end %>
